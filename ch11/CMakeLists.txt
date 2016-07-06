@@ -1,0 +1,5 @@
+file( GLOB SRCS ex*.cpp )
+foreach( SRC ${SRCS} )
+    string( REGEX REPLACE ".*/|\\.cpp$" "" DST ${SRC} )
+    add_executable( ${DST} ${SRC} )
+endforeach( SRC ${SRCS} )
